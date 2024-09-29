@@ -7,6 +7,8 @@ const translations = {
       subtitle: "Desarrollador de Apps & Desarrollador Web",
       resume: "Ver mi resumen",
       linkedin: "LinkedIn",
+      github: "GitHub",
+
       sections: {
         home: "Inicio",
         about: "Sobre mí",
@@ -66,6 +68,8 @@ const translations = {
       subtitle: "App Developer & Web Developer",
       resume: "View my resume",
       linkedin: "LinkedIn",
+      github: "GitHub",
+
       sections: {
         home: "Home",
         about: "About Me",

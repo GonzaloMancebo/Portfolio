@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
@@ -21,12 +22,11 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-  scroll-behavior: smooth; /* Agrega desplazamiento suave */
+    to bottom,
+    transparent,
+    rgb(var(--background-end-rgb))
+  ) rgb(var(--background-start-rgb));
+  scroll-behavior: smooth;
 }
 
 @layer utilities {
@@ -57,33 +57,75 @@ html {
 
 /* Estilos Responsivos */
 
-@media (max-width: 640px) { /* Para dispositivos móviles */
+/* Para móviles (max-width: 640px) */
+@media (max-width: 640px) {
   h1 {
-    font-size: 2rem; /* Tamaño más pequeño para h1 */
+    font-size: 1.875rem; /* Tailwind: text-3xl */
   }
   h2 {
-    font-size: 1.5rem; /* Tamaño más pequeño para h2 */
+    font-size: 1.5rem; /* Tailwind: text-2xl */
   }
+
+  /* Ajustes específicos de navegación */
   .nav {
-    flex-direction: column; /* Navegación vertical en móviles */
+    flex-direction: column;
+    gap: 1rem; /* Añadir espacio entre elementos de navegación en móviles */
+  }
+
+  /* Asegurar que el botón de cambio de idioma no se sobreponga */
+  button {
+    top: 10px;
+    right: 10px;
+    padding: 0.5rem 1rem; /* Reducir tamaño en móviles */
+  }
+
+  .container {
+    padding: 1rem;
   }
 }
 
-@media (min-width: 640px) {
-  /* Ajustes para pantallas más grandes */
+/* Para pantallas medianas (641px - 768px) */
+@media (min-width: 641px) and (max-width: 768px) {
   h1 {
-    font-size: 3rem; /* Tamaño mayor para h1 */
+    font-size: 2.25rem; /* Tailwind: text-4xl */
   }
   h2 {
-    font-size: 2rem; /* Tamaño mayor para h2 */
+    font-size: 1.875rem; /* Tailwind: text-3xl */
+  }
+
+  /* Ajustes en el botón de idioma */
+  button {
+    padding: 0.75rem 1.5rem; /* Aumentar ligeramente el tamaño del botón */
+  }
+
+  .nav {
+    flex-direction: row;
+    gap: 2rem; /* Más espacio entre los enlaces de navegación */
   }
 }
 
-@media (min-width: 768px) { /* Para tablets y pantallas más grandes */
+/* Para pantallas grandes (769px en adelante) */
+@media (min-width: 769px) {
   h1 {
-    font-size: 3.5rem; /* Tamaño aún mayor para h1 */
+    font-size: 3rem; /* Tailwind: text-5xl */
   }
   h2 {
-    font-size: 2.5rem; /* Tamaño aún mayor para h2 */
+    font-size: 2.5rem; /* Tailwind: text-4xl */
   }
+
+  /* Aumentar el espacio para el botón de idioma */
+  button {
+    padding: 1rem 2rem;
+  }
+
+  .nav {
+    flex-direction: row;
+    gap: 2.5rem; /* Espacio adecuado entre los elementos */
+  }
+}
+
+/* Ajustes generales de imágenes */
+img {
+  max-width: 100%;
+  height: auto;
 }
