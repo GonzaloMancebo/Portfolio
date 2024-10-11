@@ -4,8 +4,8 @@ const translations = {
   es: {
     header: {
       title: "Hola, soy Gonzalo Mancebo",
-      subtitle: "Desarrollador de Apps & Desarrollador Web",
-      resume: "Ver mi resumen",
+      subtitle: "Desarrollador Web & Desarrollador de Apps Moviles",
+      resume: "Descargar mi CV",
       linkedin: "LinkedIn",
       github: "GitHub",
 
@@ -65,8 +65,8 @@ const translations = {
   en: {
     header: {
       title: "Hello, I'm Gonzalo Mancebo",
-      subtitle: "App Developer & Web Developer",
-      resume: "View my resume",
+      subtitle: "Web Software Developer & Mobile App Developer",
+      resume: "Download my CV",
       linkedin: "LinkedIn",
       github: "GitHub",
 
