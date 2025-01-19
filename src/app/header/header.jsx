@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faUser, faFolderOpen, faLaptopCode, faEnvelope, faFile } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faFolderOpen, faLaptopCode, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { useLanguage } from '../translate/LanguageContext'; // Importa el contexto de lenguaje
 
@@ -34,16 +34,6 @@ export default function Header({ scrollToSection }) {
         </h2>
         <div className="flex items-center mt-6 space-x-6">
           <a 
-            href="/resume.pdf"
-            download="CV Gonzalo Mancebo+Developer.pdf"  
-            rel="noopener noreferrer" 
-            className="flex items-center px-4 py-2 border-2 border-[#4A90E2] rounded-full text-[#4A90E2] hover:bg-[#4A90E2] hover:text-white transition-all duration-300 shadow-lg transform hover:-translate-y-1 hover:shadow-xl"
-          >
-            <FontAwesomeIcon icon={faFile} className="mr-2 text-xl" /> 
-            {translations[language].header.resume}
-          </a>
-
-          <a 
             href="https://github.com/tu-usuario"
             target="_blank" 
             rel="noopener noreferrer" 
@@ -71,11 +61,6 @@ export default function Header({ scrollToSection }) {
           <li className="flex items-center whitespace-nowrap">
             <a onClick={() => scrollToSection('top')} className="hover:underline cursor-pointer flex items-center">
               <FontAwesomeIcon icon={faHome} className="mr-1" /> {translations[language].header.sections.home}
-            </a>
-          </li>
-          <li className="flex items-center whitespace-nowrap">
-            <a onClick={() => scrollToSection('sobre-mi')} className="hover:underline cursor-pointer flex items-center">
-              <FontAwesomeIcon icon={faUser} className="mr-1" /> {translations[language].header.sections.about}
             </a>
           </li>
           <li className="flex items-center whitespace-nowrap">

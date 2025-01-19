@@ -45,10 +45,10 @@ const ContactForms = () => {
   };
 
   return (
-    <section id="contacto" className="p-9 mt-9 bg-black-900 rounded-lg shadow-lg">
-      <ToastContainer position="top-right" autoClose={5000} />
-      <h2 className="text-5xl font-bold mb-20 text-center text-blue-400">{translations[language].contact.title}</h2>
-      <form onSubmit={handleSubmit} className="max-w-lg mx-auto bg-gray-800 p-8 rounded-lg shadow-md">
+    <section id="contacto" className="p-8 mt-8">
+      <h2 className="text-3xl font-bold mb-4">
+      {translations[language].contact.title}</h2>
+      <form onSubmit={handleSubmit} className="max-w-sm mx-auto bg-gray-800 p-8 rounded-lg shadow-md ">
         <div className="mb-6">
           <label className="block text-lg font-medium text-gray-300" htmlFor="name">
             {translations[language].contact.nameLabel}

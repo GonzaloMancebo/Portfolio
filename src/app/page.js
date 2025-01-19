@@ -1,8 +1,6 @@
 "use client";
-
 import React, { useEffect } from 'react';
 import Header from './header/header';
-import AboutMe from './main/section/aboutMe'; 
 import Projects from './main/section/Projects'; 
 import Technologies from './main/section/Technologies'; // Importar el nuevo componente de Tecnologías
 import ContactForms from './main/section/contactForm';
@@ -33,7 +31,6 @@ export default function Home() {
       <Header scrollToSection={scrollToSection} /> 
       
       <main className="p-0 m-0 overflow-hidden">
-        <AboutMe />
         <Projects />
         <Technologies /> 
         <ContactForms />

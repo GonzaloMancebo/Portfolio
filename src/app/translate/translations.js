@@ -17,11 +17,6 @@ const translations = {
         contact: "Contacto",
       },
     },
-    aboutMe: {
-      title: "Sobre mí",
-      description1: "Hola, soy Gonzalo Mancebo. Me gradué como Técnico en Seguridad e Higiene, pero descubrí mi verdadera pasión en la programación. Por eso, decidí cambiar de rumbo y me gradué en App Developer y Web Developer en Coder House. Sin embargo, sentía que necesitaba algo más, así que también completé la carrera de Backend para enriquecer mis habilidades y darle más vida a mis aplicaciones.",
-      description2: "Actualmente, estoy trabajando en proyectos personales para afianzar mis conocimientos y aprender de manera autodidacta todos los días. Estoy en busca de mi primera oportunidad profesional en el campo de la programación, con el objetivo de aplicar todo lo que he aprendido y seguir creciendo en este apasionante campo.",
-    },
     projects: {
       noProjects: "No hay proyectos disponibles.",
       1: {
@@ -77,11 +72,6 @@ const translations = {
         technologies: "Technologies",
         contact: "Contact",
       },
-    },
-    aboutMe: {
-      title: "About Me",
-      description1: "Hello, I am Gonzalo Mancebo. I graduated as a Technician in Safety and Hygiene, but I discovered my true passion in programming. That’s why I decided to change direction and graduated as an App Developer and Web Developer at Coder House. However, I felt I needed something more, so I also completed the Backend course to enrich my skills and bring more life to my applications.",
-      description2: "Currently, I am working on personal projects to strengthen my knowledge and learn autodidactically every day. I am looking for my first professional opportunity in the programming field, aiming to apply everything I have learned and continue growing in this exciting field.",
     },
     projects: {
       noProjects: "No projects available.",

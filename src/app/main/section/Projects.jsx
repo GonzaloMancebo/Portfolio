@@ -59,20 +59,7 @@ const Projects = () => {
               className="bg-white p-4 rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-2xl"
             >
               <div
-                className="relative w-full h-48 mb-4 cursor-pointer"
-                onMouseEnter={() => handleMouseEnter(project.id)}
-                onMouseLeave={handleMouseLeave}
-                onClick={() => handleVideoClick(project.id)}
-              >
-                {hoveredProjectId === project.id ? (
-                  <video
-                    src={project.videoUrl}
-                    autoPlay
-                    loop
-                    muted
-                    className="rounded-lg w-full h-full object-cover"
-                  />
-                ) : (
+                className="relative w-full h-48 mb-4 cursor-pointer" >
                   <div className="relative w-full h-48 mb-4 flex items-center justify-center">
                     <Image
                       src={project.imageUrl || "/proyecto1_image.png"}
@@ -83,7 +70,7 @@ const Projects = () => {
                       className="some-class"
                     />
                   </div>
-                )}
+                
               </div>
               <h3 className="text-black font-semibold mb-2">{translations[language].projects[project.id].name}</h3>
               <h3 className="text-black font-semibold mb-2">{translations[language].projects[project.id].credential}</h3>
@@ -111,16 +98,6 @@ const Projects = () => {
                   </a>
                 )}
               </div>
-
-              {/* Modal para el video */}
-              {openProjectId === project.id && (
-                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70" onClick={handleCloseVideo}>
-                  <div className="relative w-3/4 md:w-1/2">
-                    <button onClick={handleCloseVideo} className="absolute top-2 right-2 text-white text-xl">X</button>
-                    <video src={project.videoUrl} controls className="w-full rounded-lg" />
-                  </div>
-                </div>
-              )}
             </div>
           ))
         ) : (
