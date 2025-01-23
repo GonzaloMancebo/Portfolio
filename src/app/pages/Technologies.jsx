@@ -2,8 +2,8 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Slider from 'react-slick';
-import { technologies } from '../../data';
-import { useLanguage } from '../../translate/LanguageContext'; // Importa el contexto de lenguaje
+import { technologies } from '../data';
+import { useLanguage } from '../translate/LanguageContext'; // Importa el contexto de lenguaje
 
 const Technologies = () => {
   const { language, translations } = useLanguage(); // Usa el contexto de lenguaje

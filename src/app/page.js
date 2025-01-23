@@ -1,10 +1,6 @@
 "use client";
 import React, { useEffect } from 'react';
-import Header from './header/header';
-import Projects from './main/section/Projects'; 
-import Technologies from './main/section/Technologies'; // Importar el nuevo componente de Tecnologías
-import ContactForms from './main/section/contactForm';
-import { ToastContainer } from 'react-toastify';
+import Main from './main/Main';
 import 'react-toastify/dist/ReactToastify.css';
 import { LanguageProvider } from './translate/LanguageContext'; // Asegúrate de la ruta correcta
 
@@ -27,15 +23,10 @@ export default function Home() {
   }, []);
 
   return (
-    <LanguageProvider> {/* Coloca LanguageProvider aquí */}
-      <Header scrollToSection={scrollToSection} /> 
-      
-      <main className="p-0 m-0 overflow-hidden">
-        <Projects />
-        <Technologies /> 
-        <ContactForms />
-        <ToastContainer />
-      </main>
+    <LanguageProvider>
+      <div className="p-0 m-0 overflow-hidden">
+        <Main />
+      </div>
     </LanguageProvider> 
   );
 }

@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useLanguage } from '../../translate/LanguageContext'; // Importa el contexto de lenguaje
-import translations from '../../translate/translations'; // Asegúrate de importar las traducciones
+import { useLanguage } from '../translate/LanguageContext'; // Importa el contexto de lenguaje
+import translations from '../translate/translations'; // Asegúrate de importar las traducciones
 
 const ContactForms = () => { 
   const { language } = useLanguage(); // Usa el hook para obtener el idioma del contexto

@@ -1,12 +1,11 @@
 "use client";
-
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { useLanguage } from '../../translate/LanguageContext'; // Importa el contexto de lenguaje
-import initialProjects from '../../data'; // Asegúrate de que la ruta sea correcta
+import { useLanguage } from '../translate/LanguageContext'; // Importa el contexto de lenguaje
+import initialProjects from '../data'; // Asegúrate de que la ruta sea correcta
 
 const ReadMore = ({ text }) => {
   const { language, translations } = useLanguage(); // Usa el contexto de lenguaje

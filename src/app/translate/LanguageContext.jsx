@@ -1,4 +1,4 @@
-
+"use client"
 import React, { createContext, useContext, useState } from 'react';
 import translations from '../translate/translations'; // Asegúrate de que la ruta a translations.js sea correcta
 
