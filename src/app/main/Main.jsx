@@ -11,18 +11,7 @@ export default function Main() {
   const { language, changeLanguage, translations } = useLanguage(); // Usa el contexto
 
   return (
-    <main id="top" className="main-container">
-      <div className="main-background">
-        <Image
-          src="/portafoliofondo.jpg"
-          alt="Logo"
-          fill
-          style={{ objectFit: "cover" }}
-          className="main-image"
-        />
-        <div className="main-overlay"></div>
-      </div>
-
+    <main  className="main-container">
       {/* Contenido principal */}
       <div className="main-content">
         <div className="main-container-titles">
@@ -41,7 +30,7 @@ export default function Main() {
             className="main-button main-button-github"
           >
             <FontAwesomeIcon icon={faGithub} className="main-icon" /> 
-            {translations[language].header.github}
+            GitHub
           </a>
           <a 
             href="https://www.linkedin.com/in/gonzalo-mancebo-055165150/"
@@ -50,7 +39,7 @@ export default function Main() {
             className="main-button main-button-linkedin"
           >
             <FontAwesomeIcon icon={faLinkedin} className="main-icon" /> 
-            {translations[language].header.linkedin}
+            Linkedin
           </a>
         </div>
       </div>
@@ -68,12 +57,6 @@ export default function Main() {
         </button>
       </div>
 
-      {/* Redirigir a "contacto" con mailto */}
-      <div className="contact-link">
-        <a href="mailto:gmancebo.dev@gmail.com" className="contact-button">
-          {translations[language].header.contact}
-        </a>
-      </div>
     </main>
   );
 }

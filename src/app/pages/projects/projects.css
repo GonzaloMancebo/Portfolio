@@ -43,7 +43,7 @@
   border-radius: 50%;
   cursor: pointer;
   font-size: 2rem;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
 .carousel-btn:hover {
@@ -63,7 +63,8 @@
 
 /* Tarjetas del carrusel */
 .project-card {
-  width: 300px; /* Ancho fijo de las tarjetas */
+  width: 300px; 
+  height: 450px;
   padding: 20px;
   border-radius: 15px;
   background: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
@@ -90,13 +91,14 @@
 /* Título del proyecto */
 .project-title {
   font-size: 1.5rem;
-  margin-top: 10px;
   font-weight: bold;
 }
 
 /* Descripción del proyecto */
 .project-description {
   font-size: 1rem;
+  margin-bottom: 10px;
+    margin-top: 50px;
   color: #ccc;
   margin-top: 10px;
   line-height: 1.5;
@@ -119,3 +121,31 @@
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
+.project-technologies {
+  display: flex; /* Usamos flexbox para que las tecnologías estén en fila */
+  margin-top: 10px;
+}
+
+.tech-item {
+  padding: 5px 10px;
+  font-size: 1rem;
+  color: white; 
+  font-weight: 600;
+  margin-right: 0px;
+}
+
+.project-links {
+  margin-top: 15px;
+}
+
+.project-link {
+  display: inline-block;
+  margin-right: 10px;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}

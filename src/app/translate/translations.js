@@ -5,8 +5,7 @@ const translations = {
     header: {
       title: "Gonzalo Mancebo",
       subtitle: "Desarrollador Fullstack & Desarrollador de Apps Moviles",
-      linkedin: "LinkedIn",
-      github: "GitHub",
+
 
       sections: {
         home: "Inicio",
@@ -51,8 +50,6 @@ const translations = {
     header: {
       title: "Gonzalo Mancebo",
       subtitle: "Full Stack Developer & Mobile App Developer",
-      linkedin: "LinkedIn",
-      github: "GitHub",
 
       sections: {
         home: "Home",

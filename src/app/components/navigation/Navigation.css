@@ -11,7 +11,7 @@
     background: rgba(0, 0, 0, 0.5);
     padding: 30px; /* Espaciado interno uniforme */
     border-radius: 1rem;
-    width: 50%; /* Ajusta el ancho según lo que necesites */
+    width: 55%; /* Ajusta el ancho según lo que necesites */
     height: auto; /* Ajusta la altura automáticamente */
     box-sizing: border-box; /* Incluye padding en las dimensiones */
     align-items: center; /* Centra verticalmente los elementos en las filas */
@@ -20,25 +20,7 @@
 
 
 
-.main-icon-bounce {
-    margin-right: 0.5rem;
-    animation: bounce 1s infinite;
-    color: #4A90E2;
-  }
-  
-  @keyframes bounce {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-  }
-  
-  
-  
-  
-  
+
   
   .nav-grid {
     display: grid;
@@ -55,7 +37,6 @@
   
   .nav-link {
     color: white;
-    font-size: 1rem;
     text-decoration: none;
     transition: color 0.3s;
   }

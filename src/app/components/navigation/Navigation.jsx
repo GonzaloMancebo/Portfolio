@@ -6,7 +6,7 @@ import Link from 'next/link';
 import "./Navigation.css";
 
 function Navigation() {
-    const { language, changeLanguage, translations } = useLanguage(); // Usa el contexto
+    const { language,  translations } = useLanguage(); // Usa el contexto
 
   return (
     <nav className="main-navigation">

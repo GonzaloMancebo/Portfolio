@@ -1,4 +1,20 @@
-/* Contenedor principal del main */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("/portafoliofondo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  height: 100vh; 
+  width: 100vw; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .main-container {
   position: relative;
   width: 100%;
@@ -9,15 +25,20 @@
   overflow: hidden;
   flex-direction: column; /* Cambio aquí para asegurar el flujo vertical */
 }
-
-
-/* Fondo y overlay */
-.main-background {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
+.main-icon-bounce {
+  margin-right: 0.5rem;
+  animation: bounce 1s infinite;
+  color: #cfc5c5;
 }
 
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
 .main-image {
   position: absolute;
   inset: 0;
@@ -57,7 +78,7 @@
 .main-subtitle {
   font-size: 1.8rem; 
   font-weight: bold;
-  color: #4A90E2;
+  color: #cfc5c5;
   margin-bottom: 2rem;
   line-height: 1.5; 
   max-width: 90%; 
@@ -115,6 +136,7 @@
   font-size: 0.9rem;
   font-weight: 600;
   transition: transform 0.3s, box-shadow 0.3s;
+  gap: 0.5rem;
 }
 
 .main-button-github {
