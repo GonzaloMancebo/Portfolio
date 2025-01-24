@@ -10,11 +10,15 @@ const translations = {
 
       sections: {
         home: "Inicio",
+        experience: "Experiencia",
         about: "Sobre mí",
         projects: "Proyectos",
         technologies: "Tecnologías",
         contact: "Contacto",
       },
+    },
+    experience: {
+      title: "Experiencia",
     },
     projects: {
       noProjects: "No hay proyectos disponibles.",
@@ -37,20 +41,7 @@ const translations = {
       description: "Formado como App Developer y Web Developer en Coder House, también completé estudios en Backend para fortalecer mis competencias técnicas.",
       intro: "A continuación, encontrarás las tecnologías que utilizo para crear aplicaciones robustas y efectivas:",
     },
-    contact: {
-      title: "¡Contáctame!",
-      nameLabel: "Nombre",
-      emailLabel: "Email",
-      messageLabel: "Mensaje",
-      placeholderName: "Ingresa tu nombre",
-      placeholderEmail: "Ingresa tu email",
-      placeholderMessage: "Escribe tu mensaje aquí",
-      buttonSend: "Enviar",
-      buttonSubmitting: "Enviando...",
-      toastError: "Por favor, completa todos los campos antes de enviar.",
-      toastSuccess: "Mensaje enviado correctamente.",
-      toastErrorSending: "Error al enviar el mensaje. Inténtalo nuevamente más tarde.",
-    },
+   
     readMore: {
       readMore: "Leer más",
       readLess: "Leer menos",
@@ -65,11 +56,15 @@ const translations = {
 
       sections: {
         home: "Home",
+        experience: "Experience",
         about: "About Me",
         projects: "Projects",
         technologies: "Technologies",
         contact: "Contact",
       },
+    },
+    experience: {
+      title: "Experience",
     },
     projects: {
       noProjects: "No projects available.",
@@ -92,20 +87,7 @@ const translations = {
       description: "Trained as an App Developer and Web Developer at Coder House, I also completed Backend studies to strengthen my technical skills.",
       intro: "Below are the technologies I use to create robust and effective applications:",
     },
-    contact: {
-      title: "Contact Me!",
-      nameLabel: "Name",
-      emailLabel: "Email",
-      messageLabel: "Message",
-      placeholderName: "Enter your name",
-      placeholderEmail: "Enter your email",
-      placeholderMessage: "Write your message here",
-      buttonSend: "Send",
-      buttonSubmitting: "Sending...",
-      toastError: "Please fill in all fields before sending.",
-      toastSuccess: "Message sent successfully.",
-      toastErrorSending: "Error sending the message. Please try again later.",
-    },
+    
     readMore: {
       readMore: "Read more",
       readLess: "Read less",

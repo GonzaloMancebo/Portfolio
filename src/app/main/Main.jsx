@@ -1,31 +1,20 @@
-"use client";
+"use client"; 
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faFolderOpen, faLaptopCode, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'; // Corregido importación de faGithub y faLinkedin
+import { faLaptopCode } from '@fortawesome/free-solid-svg-icons'; // faLaptopCode sigue siendo de solid
 import { useLanguage } from '../translate/LanguageContext'; // Importa el contexto de lenguaje
-import Link from 'next/link'; 
 import "./main.css";
+import Navigation from '../components/navigation/Navigation';
 
-export default function Main({ scrollToSection }) {
+export default function Main() {
   const { language, changeLanguage, translations } = useLanguage(); // Usa el contexto
-
-  // Función para manejar la navegación de los enlaces
-  const handleNavigation = (section) => {
-    if (section === 'contacto') {
-      // Redirigir al correo al hacer clic en "contacto"
-      window.location.href = "mailto:gmancebo.dev@gmail.com";
-    } else {
-      // Llamar la función scrollToSection si no es contacto
-      scrollToSection(section);
-    }
-  };
 
   return (
     <main id="top" className="main-container">
       <div className="main-background">
         <Image
-          src="/portfolio.png"
+          src="/portafoliofondo.jpg"
           alt="Logo"
           fill
           style={{ objectFit: "cover" }}
@@ -67,39 +56,7 @@ export default function Main({ scrollToSection }) {
       </div>
 
       {/* Navegación */}
-      <nav className="main-navigation">
-        <div className="nav-item">
-          <button onClick={() => handleNavigation('top')} className="nav-link">
-            <FontAwesomeIcon icon={faHome} className="nav-icon" /> 
-            {translations[language].header.sections.home}
-          </button>
-        </div>
-
-        <div className="nav-item">
-          <Link href="/pages/projects">
-            <div className="nav-link">
-              <FontAwesomeIcon icon={faFolderOpen} className="nav-icon" />
-              {translations[language].header.sections.projects}
-            </div>
-          </Link>
-        </div>
-
-        <div className="nav-item">
-          <Link href="/technologies">
-            <div className="nav-link">
-              <FontAwesomeIcon icon={faLaptopCode} className="nav-icon" />
-              {translations[language].header.sections.technologies}
-            </div>
-          </Link>
-        </div>
-
-        <div className="nav-item">
-          <button onClick={() => handleNavigation('contacto')} className="nav-link">
-            <FontAwesomeIcon icon={faEnvelope} className="nav-icon" />
-            {translations[language].header.sections.contact}
-          </button>
-        </div>
-      </nav>
+      <Navigation/>
 
       {/* Botón de cambio de idioma */}
       <div className="language-switch">
@@ -107,8 +64,15 @@ export default function Main({ scrollToSection }) {
           onClick={() => changeLanguage(language === 'es' ? 'en' : 'es')}
           className="language-button"
         >
-          {language === 'es' ? 'Switch to English' : 'Cambiar idioma a Español'}
+          {language === 'es' ? 'Switch to English' : 'Cambiar a Español'}
         </button>
+      </div>
+
+      {/* Redirigir a "contacto" con mailto */}
+      <div className="contact-link">
+        <a href="mailto:gmancebo.dev@gmail.com" className="contact-button">
+          {translations[language].header.contact}
+        </a>
       </div>
     </main>
   );

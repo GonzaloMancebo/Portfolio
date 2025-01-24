@@ -1,0 +1,14 @@
+.return-home-container {
+    position: fixed; /* Cambié absolute por fixed */
+    top: 1rem; /* Coloca el botón a 1rem desde la parte superior */
+    left: 1rem; /* Coloca el botón a 1rem desde la parte izquierda */
+    display: flex;
+    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+    z-index: 20; /* Asegúrate de que esté encima de otros elementos */
+}
+
+.return-home-button {
+    background-color: transparent; /* Color de fondo transparente */
+    color: white; /* Color del texto en blanco */
+    cursor: pointer;
+}

@@ -1,0 +1,121 @@
+/* Contenedor principal del carrusel */
+.projects-carousel-container {
+  position: relative;
+  width: 100%; /* Ocupa todo el ancho */
+  height: 100vh; /* Ocupa todo el alto de la pantalla */
+  margin: 0 auto;
+  text-align: center;
+  background-image: url("/background.jpg"); /* Imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 15px 80px rgba(0, 0, 0, 0.2); /* Sombra del contenedor */
+}
+
+/* Controles del carrusel (botones) */
+.carousel-controls {
+  position: absolute;
+  top: 50%; /* Centra verticalmente los botones */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none; /* Botones ocultos inicialmente */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Mostrar los controles al pasar el cursor */
+.projects-carousel-container:hover .carousel-controls {
+  opacity: 1;
+  pointer-events: auto; /* Habilita los clics */
+}
+
+/* Botones individuales del carrusel */
+.carousel-btn {
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 2rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.carousel-btn:hover {
+  transform: scale(1.2); /* Efecto al pasar el cursor */
+}
+
+/* Botón izquierdo y derecho */
+.carousel-btn.left {
+  position: absolute;
+  left: 20px;
+}
+
+.carousel-btn.right {
+  position: absolute;
+  right: 20px;
+}
+
+/* Tarjetas del carrusel */
+.project-card {
+  width: 300px; /* Ancho fijo de las tarjetas */
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+  color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 15px 25px rgba(0, 0, 0, 0.5); /* Sombra inferior */
+  margin: 0 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover en las tarjetas */
+.project-card:hover {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 15px 30px rgba(0, 0, 0, 0.6); /* Sombra más intensa */
+}
+
+/* Imagen dentro de las tarjetas */
+.project-image {
+  width: 100%; /* Imagen ocupa todo el ancho */
+  height: 200px; /* Altura fija */
+  object-fit: cover; /* Ajuste sin distorsión */
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Título del proyecto */
+.project-title {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Descripción del proyecto */
+.project-description {
+  font-size: 1rem;
+  color: #ccc;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* Animaciones para el movimiento de las tarjetas */
+.project-card.slide-left {
+  transform: translateX(-100%);
+  opacity: 0.5;
+}
+
+.project-card.slide-right {
+  transform: translateX(100%);
+  opacity: 0.5;
+}
+
+.project-card.enter {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+

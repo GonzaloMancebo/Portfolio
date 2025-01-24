@@ -1,17 +1,9 @@
-"use client";
+"use client"; 
 import React, { useEffect } from 'react';
 import Main from './main/Main';
-import 'react-toastify/dist/ReactToastify.css';
 import { LanguageProvider } from './translate/LanguageContext'; // Asegúrate de la ruta correcta
 
 export default function Home() {
-  const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   useEffect(() => {
     const hash = window.location.hash;
     if (hash) {

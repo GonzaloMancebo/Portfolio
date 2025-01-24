@@ -66,70 +66,6 @@
 }
 
 
-.main-icon-bounce {
-  margin-right: 0.5rem;
-  animation: bounce 1s infinite;
-  color: #4A90E2;
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-
-.main-navigation {
-  position: absolute; /* Cambié fixed por absolute para que se quede en el centro de la página */
-  top: 50%; /* Esto coloca la barra de navegación en el centro vertical */
-  left: 50%; /* Centrado horizontalmente */
-  transform: translate(-50%, -50%); /* Ajusta el centro de la barra tanto en X como en Y */
-  z-index: 15;
-  display: flex;
-  align-items: center;
-  justify-content: center; /* Centra los elementos dentro de la barra */
-  background: rgba(0, 0, 0, 0.5);
-  padding: 1rem 3rem; /* Más espacio interno */
-  border-radius: 1rem;
-  width: 30%; /* Ancho mayor para ocupar más espacio */
-  height: 150px;
-  gap: 10px; 
-  margin-top: 50px;
-}
-
-
-
-.nav-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-item {
-  text-align: center;
-}
-
-.nav-link {
-  color: white;
-  font-size: 1rem;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.nav-link:hover {
-  color: #4A90E2;
-}
-
-.nav-icon {
-  margin-right: 0.5rem;
-}
-
 /* Botón de cambio de idioma */
 .language-switch {
   position: fixed; /* Cambié absolute por fixed */
@@ -161,12 +97,12 @@
   display: flex;
   justify-content: center;
   gap: 1rem;
-  position: fixed; /* Cambié absolute por fixed */
-  bottom: 2rem; /* Mantiene los enlaces fijos a 2rem desde el fondo */
-  left: 50%; /* Centra los enlaces horizontalmente */
-  transform: translateX(-50%); /* Ajuste de desplazamiento para centrar exactamente */
+  position: fixed; 
+  bottom: 2rem; 
+  left: 50%; 
+  transform: translateX(-50%); 
   z-index: 10;
-  margin-top: 0; /* Eliminado el margin-top, ya que no es necesario con position: fixed */
+  margin-top: 0; 
 }
 
 
