@@ -117,14 +117,57 @@ body {
 .main-links {
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  position: fixed; 
-  bottom: 2rem; 
-  left: 50%; 
-  transform: translateX(-50%); 
+  align-items: center;
+  gap: 2rem; /* Espacio entre las secciones */
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 10;
-  margin-top: 0; 
 }
+
+.github-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Espacio entre el texto y el botón */
+}
+
+.p-seemore {
+  margin: 0; /* Elimina márgenes */
+  font-size: 1rem; /* Tamaño de fuente ajustable */
+}
+
+.main-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.main-button-github {
+  background-color: #24292e;
+  color: white;
+}
+
+.main-button-linkedin {
+  background-color: #0077b5;
+  color: white;
+}
+
+.main-button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.main-icon {
+  margin-right: 0.5rem; /* Espacio entre el ícono y el texto */
+}
+
 
 
 .main-button {

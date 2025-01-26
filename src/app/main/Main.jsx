@@ -23,26 +23,20 @@ export default function Main() {
         </div>
 
         <div className="main-links">
-          <a 
-            href="https://github.com/GonzaloMancebo"
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="main-button main-button-github"
-          >
-            <FontAwesomeIcon icon={faGithub} className="main-icon" /> 
-            GitHub
-          </a>
-          <a 
-            href="https://www.linkedin.com/in/gonzalo-mancebo-055165150/"
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="main-button main-button-linkedin"
-          >
-            <FontAwesomeIcon icon={faLinkedin} className="main-icon" /> 
-            Linkedin
-          </a>
-        </div>
-      </div>
+  <div className="github-section">
+    <p className="p-seemore">{translations[language].header.sections.seemore}</p>
+    <a
+      href="https://github.com/GonzaloMancebo"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="main-button main-button-github"
+    >
+      <FontAwesomeIcon icon={faGithub} className="main-icon" />
+      GitHub
+    </a>
+  </div>
+</div>
+
 
       {/* Navegación */}
       <Navigation/>
@@ -55,6 +49,7 @@ export default function Main() {
         >
           {language === 'es' ? 'Switch to English' : 'Cambiar a Español'}
         </button>
+      </div>
       </div>
 
     </main>

@@ -1,27 +1,25 @@
 .main-navigation {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
-    grid-template-rows: repeat(2, 1fr); /* Dos filas con igual altura */
-    gap: 30px; /* Espaciado uniforme entre los elementos */
-    position: absolute;
-    top: 55%; /* Centrar verticalmente */
-    left: 50%; /* Centrar horizontalmente */
-    transform: translate(-50%, -50%);
-    z-index: 15;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 30px; /* Espaciado interno uniforme */
-    border-radius: 1rem;
-    width: 55%; /* Ajusta el ancho según lo que necesites */
-    height: auto; /* Ajusta la altura automáticamente */
-    box-sizing: border-box; /* Incluye padding en las dimensiones */
-    align-items: center; /* Centra verticalmente los elementos en las filas */
-    justify-items: center; /* Centra horizontalmente los elementos en las columnas */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+  grid-template-rows: repeat(2, 1fr); /* Dos filas con igual altura */
+  gap: 28px; 
+  position: absolute;
+  top: 55%; /* Centrar verticalmente */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translate(-50%, -50%);
+  z-index: 15;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 28px; 
+  border-radius: 1rem;
+  width: 70%; 
+  height: 150px; 
+  box-sizing: border-box; 
+  align-items: center; 
+  justify-items: center; 
+  overflow: hidden;
 }
 
-
-
-
-  
+ 
   .nav-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

@@ -1,5 +1,4 @@
 "use client";
-
 const translations = {
   es: {
     header: {
@@ -13,7 +12,9 @@ const translations = {
         about: "Sobre mí",
         projects: "Proyectos",
         technologies: "Tecnologías",
-        contact: "Contacto",
+        contact: "Email",
+        seemore: "Descubre más proyectos en",
+
       },
     },
     experience: {
@@ -57,7 +58,8 @@ const translations = {
         about: "About Me",
         projects: "Projects",
         technologies: "Technologies",
-        contact: "Contact",
+        contact: "Email",
+        seemore: "Check out more projects on",
       },
     },
     experience: {
