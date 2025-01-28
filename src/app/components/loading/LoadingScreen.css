@@ -9,81 +9,101 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background: rgb(2, 0, 36);
+    background: -moz-linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(45, 36, 88, 1) 46%, rgba(0, 212, 255, 1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(45, 36, 88, 1) 46%, rgba(0, 212, 255, 1) 100%);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(45, 36, 88, 1) 46%, rgba(0, 212, 255, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024", endColorstr="#00d4ff", GradientType=1);
     font-size: 2rem;
-    transition: opacity 2s ease-out; /* Aumenta el tiempo de desvanecimiento */
-    visibility: visible; /* Asegura que sea visible al inicio */
     z-index: 10;
-    text-align: center; /* Centra el texto */
-  }
-  
-  .loading-screen.hide {
-    opacity: 0; /* Desaparece suavemente */
-    visibility: visible; /* Deja visible para mantener la transición */
-  }
-  
-  /* Animación del spinner */
-  .spinner {
+    text-align: center;
+    transition: opacity 1s ease-out; /* Suaviza el desvanecimiento */
+}
+
+/* Se mantiene la transición suave de desvanecimiento */
+.loading-screen.hide {
+    opacity: 0; /* Desaparece lentamente */
+    visibility: hidden; /* Garantiza que esté oculta cuando no se muestra */
+}
+
+/* Animación del spinner */
+.spinner {
     font-size: 4rem;
-    animation: spin 2s infinite; /* El spinner girará indefinidamente */
-    margin-bottom: 1.5rem; /* Separa el spinner del texto */
-  }
-  
-  /* Animación de giro */
-  @keyframes spin {
+    animation: spin 2s infinite;
+    margin-bottom: 1.5rem;
+    color: #00d4ff;
+}
+
+/* Animación de giro */
+@keyframes spin {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
-  
-  /* Agregar un título o mensaje adicional */
-  .loading-title {
-    font-size: 1.5rem;
-    color: #333;
+}
+
+/* Agregar un efecto de parpadeo a un texto */
+.loading-blink {
+    font-size: 1rem;
+    color: #ff00ff;
+    margin-top: 2rem;
+    animation: blink 1.5s infinite;
+}
+
+/* Animación de parpadeo */
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Transición suave para los elementos cuando aparecen */
+.content {
+    opacity: 0;
+    animation: fadeInContent 1.5s ease-out forwards; /* Transición suave para el contenido */
+}
+
+/* Animación para hacer aparecer el contenido */
+@keyframes fadeInContent {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Agregar un título o mensaje adicional */
+.loading-title {
+    font-size: 2rem;
+    color: #fff;
     font-weight: bold;
     margin-top: 1rem;
-  }
-  
-  /* Subtítulo con texto animado */
-  .loading-subtitle {
-    font-size: 1.2rem;
-    color: #666;
+}
+
+/* Subtítulo con color más suave */
+.loading-subtitle {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
     margin-top: 0.5rem;
     opacity: 0;
     animation: fadeIn 2s ease-out 1.5s forwards;
-  }
-  
-  /* Animación para el subtítulo */
-  @keyframes fadeIn {
+}
+
+/* Animación para el subtítulo */
+@keyframes fadeIn {
     0% {
-      opacity: 0;
+        opacity: 0;
     }
     100% {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-  
-  /* Agregar un efecto de parpadeo a un texto si lo deseas */
-  .loading-blink {
-    font-size: 1rem;
-    color: #0077b5;
-    margin-top: 2rem;
-    animation: blink 1.5s infinite;
-  }
-  
-  /* Animación de parpadeo */
-  @keyframes blink {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-  
+}
