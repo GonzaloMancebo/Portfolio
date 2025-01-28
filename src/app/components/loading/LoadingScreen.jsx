@@ -1,6 +1,6 @@
-// components/LoadingScreen.js
+"use client";
 import { useEffect, useState } from 'react';
-import './LoadingScreen.css'; // Si deseas agregar estilos adicionales
+import './LoadingScreen.css';
 
 const LoadingScreen = ({ onAnimationEnd }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -15,9 +15,11 @@ const LoadingScreen = ({ onAnimationEnd }) => {
   }, [onAnimationEnd]);
 
   return (
-    <div className={`loading-screen ${isLoading ? 'show' : 'hide'}`}>
+    <div className={`loading-screen ${!isLoading ? 'hide' : ''}`}>
       <div className="spinner">✨</div>
-      <h1>Bienvenido a mi portafolio</h1>
+      <h1 className="loading-title">Bienvenido a mi portafolio</h1>
+      <p className="loading-subtitle">Cargando contenido...</p>
+      <p className="loading-blink">¡Gracias por tu paciencia!</p>
     </div>
   );
 };
