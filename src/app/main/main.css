@@ -1,20 +1,17 @@
+/* Estilos globales (body) */
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-image: url("/portafoliofondo.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; 
-  height: 100vh; 
-  width: 100vw; 
+  height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+  width: 100vw; /* Asegura que el body ocupe todo el ancho de la ventana */
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden; /* Evita que se pueda hacer scroll si no es necesario */
 }
 
-
+/* Estilos para el contenedor principal */
 .main-container {
   position: relative;
   width: 100%;
@@ -22,9 +19,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  flex-direction: column; /* Cambio aquí para asegurar el flujo vertical */
+  overflow: visible;
+  flex-direction: column; /* Esto asegura el flujo vertical */
 }
+
+/* Animación para el icono */
 .main-icon-bounce {
   margin-right: 0.5rem;
   animation: bounce 1s infinite;
@@ -39,19 +38,22 @@ body {
     transform: translateY(-10px);
   }
 }
+
+/* Estilo de la imagen */
 .main-image {
   position: absolute;
   inset: 0;
   object-fit: cover;
 }
 
+/* Overlay en la imagen (si se quiere colocar alguna capa semitransparente sobre la imagen) */
 .main-overlay {
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Contenido principal */
+/* Estilos para el contenido principal */
 .main-content {
   position: relative;
   z-index: 10;
@@ -59,7 +61,7 @@ body {
   color: white;
   padding: 0 1rem;
   display: flex;
-  flex-direction: column; /* Esto asegura que los elementos estén en una columna */
+  flex-direction: column; /* Los elementos estarán en columna */
   align-items: center;
 }
 
@@ -76,34 +78,32 @@ body {
 }
 
 .main-subtitle {
-  font-size: 1.8rem; 
+  font-size: 1.8rem;
   font-weight: bold;
   color: #cfc5c5;
   margin-bottom: 2rem;
-  line-height: 1.5; 
-  max-width: 90%; 
-  word-wrap: break-word; 
-  text-align: center; 
+  line-height: 1.5;
+  max-width: 90%;
+  word-wrap: break-word;
+  text-align: center;
 }
 
-
-/* Botón de cambio de idioma */
+/* Estilos para el botón de cambio de idioma */
 .language-switch {
   position: fixed; /* Cambié absolute por fixed */
-  top: 1rem; /* Coloca el botón a 1rem desde la parte superior */
-  left: 1rem; /* Coloca el botón a 1rem desde la parte izquierda */
+  top: 1rem;
+  left: 1rem;
   display: flex;
-  justify-content: flex-start; /* Alinea el contenido a la izquierda */
-  z-index: 20; /* Asegúrate de que esté encima de otros elementos */
+  justify-content: flex-start;
+  z-index: 20;
 }
-
 
 .language-button {
   padding: 0.5rem 1rem;
   background-color: transparent;
   color: white;
   border-radius: 9999px;
-  border:solid 2px grey;
+  border: solid 2px grey;
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -113,12 +113,12 @@ body {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Botones de redes sociales */
+/* Estilos para los botones de redes sociales */
 .main-links {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem; /* Espacio entre las secciones */
+  gap: 2rem;
   position: fixed;
   bottom: 2rem;
   left: 50%;
@@ -129,12 +129,12 @@ body {
 .github-section {
   display: flex;
   align-items: center;
-  gap: 0.5rem; /* Espacio entre el texto y el botón */
+  gap: 0.5rem;
 }
 
 .p-seemore {
-  margin: 0; /* Elimina márgenes */
-  font-size: 1rem; /* Tamaño de fuente ajustable */
+  margin: 0;
+  font-size: 1rem;
 }
 
 .main-button {
@@ -165,11 +165,10 @@ body {
 }
 
 .main-icon {
-  margin-right: 0.5rem; /* Espacio entre el ícono y el texto */
+  margin-right: 0.5rem;
 }
 
-
-
+/* Estilos adicionales para el botón de redes sociales */
 .main-button {
   display: flex;
   align-items: center;

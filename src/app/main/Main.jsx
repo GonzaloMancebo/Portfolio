@@ -1,8 +1,9 @@
-"use client"; 
+"use client";
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'; // Corregido importación de faGithub y faLinkedin
-import { faLaptopCode } from '@fortawesome/free-solid-svg-icons'; // faLaptopCode sigue siendo de solid
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
 import { useLanguage } from '../translate/LanguageContext'; // Importa el contexto de lenguaje
 import "./main.css";
 import Navigation from '../components/navigation/Navigation';
@@ -10,8 +11,17 @@ import Navigation from '../components/navigation/Navigation';
 export default function Main() {
   const { language, changeLanguage, translations } = useLanguage(); // Usa el contexto
 
+  useEffect(() => {
+    // Cambia el fondo cuando el componente se monta
+    document.body.style.backgroundImage = 'url("/portafoliofondo.jpg")';
+    document.body.style.backgroundSize = 'cover';
+    document.body.style.backgroundPosition = 'center';
+    document.body.style.backgroundRepeat = 'no-repeat';
+    document.body.style.backgroundAttachment = 'fixed';
+  }, []); // Solo se ejecuta una vez al cargar el componente
+
   return (
-    <main  className="main-container">
+    <main className="main-container">
       {/* Contenido principal */}
       <div className="main-content">
         <div className="main-container-titles">
@@ -23,35 +33,33 @@ export default function Main() {
         </div>
 
         <div className="main-links">
-  <div className="github-section">
-    <p className="p-seemore">{translations[language].header.sections.seemore}</p>
-    <a
-      href="https://github.com/GonzaloMancebo"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="main-button main-button-github"
-    >
-      <FontAwesomeIcon icon={faGithub} className="main-icon" />
-      GitHub
-    </a>
-  </div>
-</div>
+          <div className="github-section">
+            <p className="p-seemore">{translations[language].header.sections.seemore}</p>
+            <a
+              href="https://github.com/GonzaloMancebo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="main-button main-button-github"
+            >
+              <FontAwesomeIcon icon={faGithub} className="main-icon" />
+              GitHub
+            </a>
+          </div>
+        </div>
 
+        {/* Navegación */}
+        <Navigation />
 
-      {/* Navegación */}
-      <Navigation/>
-
-      {/* Botón de cambio de idioma */}
-      <div className="language-switch">
-        <button 
-          onClick={() => changeLanguage(language === 'es' ? 'en' : 'es')}
-          className="language-button"
-        >
-          {language === 'es' ? 'Switch to English' : 'Cambiar a Español'}
-        </button>
+        {/* Botón de cambio de idioma */}
+        <div className="language-switch">
+          <button
+            onClick={() => changeLanguage(language === 'es' ? 'en' : 'es')}
+            className="language-button"
+          >
+            {language === 'es' ? 'Switch to English' : 'Cambiar a Español'}
+          </button>
+        </div>
       </div>
-      </div>
-
     </main>
   );
 }

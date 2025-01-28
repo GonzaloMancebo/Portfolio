@@ -1,80 +1,86 @@
-.technologies-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 3rem 3rem;
-    text-align: center;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    background-image: url("/background.jpg");
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    min-height: 100vh; 
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.technologies-title {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-}
-
-.technologies-list {
+  }
+  
+  /* Contenedor de tecnologías */
+  .technologies-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 00%;
+    padding: 3rem;
+  }
+  
+  /* Lista de tecnologías */
+  .technologies-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
-    justify-items: center; 
-    gap: 1rem; 
-    margin-bottom: 6rem;
-    margin-left: 20rem;
-    width: 100%; 
-}
-
-
-.technology-item {
+    grid-template-columns: repeat(4, 1fr);  /* Cuatro columnas */
+    gap: 2rem;  /* Espaciado entre elementos */
+    width: 100%;  /* Asegurarse que la lista ocupe todo el espacio disponible */
+    justify-items: center;  /* Centrar los elementos de la cuadrícula */
+    align-items: center;  /* Centrar los elementos de la cuadrícula verticalmente */
+  }
+  
+  /* Elementos de cada tecnología */
+  .technology-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     font-size: 1.8rem;
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
     border: solid 1px grey;
     width: 100px;
-}
-
-.technology-item:hover {
+    height: 150px;
+  }
+  
+  /* Efecto hover para las tecnologías */
+  .technology-item:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
-}
-
-.tech-icon {
+  }
+  
+  /* Estilo de los iconos de las tecnologías */
+  .tech-icon {
     font-size: 2rem; /* Tamaño del ícono */
     margin-bottom: 1rem;
     padding: 1rem;
     border-radius: 50%;
     transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.technology-item:hover .tech-icon {
+  }
+  
+  /* Efecto hover para los iconos */
+  .technology-item:hover .tech-icon {
     transform: scale(1.1);
-}
-
-.tech-name {
+  }
+  
+  /* Nombre de la tecnología */
+  .tech-name {
     font-size: 1.1rem;
     color: #333;
     font-weight: 500;
     text-transform: capitalize;
-}
-
-/* Colores de las tecnologías */
-.react-color { background-color: #61DAFB; } /* React */
-.android-color { background-color: #3DDC84; } /* Android */
-.css-color { background-color: #2965F1; } /* CSS */
-.html-color { background-color: #F16529; } /* HTML */
-.nodejs-color { background-color: #68A063; } /* Node.js */
-.github-color { background-color: #333; } /* GitHub */
-.database-color { background-color: #9B59B6; } /* Database */
-.aws-color { background-color: #FF9900; } /* AWS */
-.js-color { background-color: #F7DF1E; } /* JavaScript */
+  }
+  
+  /* Colores de las tecnologías */
+  .react-color { background-color: #61DAFB; } /* React */
+  .android-color { background-color: #3DDC84; } /* Android */
+  .css-color { background-color: #2965F1; } /* CSS */
+  .html-color { background-color: #F16529; } /* HTML */
+  .nodejs-color { background-color: #68A063; } /* Node.js */
+  .github-color { background-color: #333; } /* GitHub */
+  .database-color { background-color: #9B59B6; } /* Database */
+  .aws-color { background-color: #FF9900; } /* AWS */
+  .js-color { background-color: #F7DF1E; } /* JavaScript */
+  

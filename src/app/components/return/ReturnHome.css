@@ -1,5 +1,5 @@
 .return-home-container {
-    position: fixed; /* Cambié absolute por fixed */
+    position: absolute; /* Cambié absolute por fixed */
     top: 1rem; /* Coloca el botón a 1rem desde la parte superior */
     left: 1rem; /* Coloca el botón a 1rem desde la parte izquierda */
     display: flex;

@@ -19,9 +19,9 @@
 .carousel-controls {
   position: absolute;
   top: 50%; /* Centra verticalmente los botones */
-  width: 100%;
+  width: 45%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center ;
   align-items: center;
   pointer-events: none; /* Botones ocultos inicialmente */
   opacity: 0;
@@ -51,19 +51,29 @@
 }
 
 /* Botón izquierdo y derecho */
-.carousel-btn.left {
-  position: absolute;
-  left: 20px;
-}
-
+.carousel-btn.left,
 .carousel-btn.right {
   position: absolute;
-  right: 20px;
+  top: 60%; /* Cambié el valor de top para acercarlo más a la tarjeta */
+  transform: translateY(-50%); /* Asegura que el botón esté perfectamente centrado */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Botón izquierdo */
+.carousel-btn.left {
+  left: 20px; /* Mantén el margen a la izquierda */
+}
+
+/* Botón derecho */
+.carousel-btn.right {
+  right: 20px; /* Mantén el margen a la derecha */
 }
 
 /* Tarjetas del carrusel */
 .project-card {
-  width: 300px; 
+  width: 300px;
   height: 450px;
   padding: 20px;
   border-radius: 15px;
@@ -81,11 +91,12 @@
 
 /* Imagen dentro de las tarjetas */
 .project-image {
-  width: 100%; /* Imagen ocupa todo el ancho */
-  height: 200px; /* Altura fija */
-  object-fit: cover; /* Ajuste sin distorsión */
+  width: 100%; /* Esto asegura que la imagen ocupe todo el ancho de su contenedor */
+  height: auto; /* La altura es ajustada proporcionalmente */
+  object-fit: cover; /* Asegura que la imagen no se distorsione */
   border-radius: 10px;
   transition: transform 0.3s ease;
+  margin-top: 10px;
 }
 
 /* Título del proyecto */
@@ -98,9 +109,8 @@
 .project-description {
   font-size: 1rem;
   margin-bottom: 10px;
-    margin-top: 50px;
-  color: #ccc;
   margin-top: 10px;
+  color: #ccc;
   line-height: 1.5;
 }
 
@@ -121,6 +131,7 @@
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
+/* Tecnologías */
 .project-technologies {
   display: flex; /* Usamos flexbox para que las tecnologías estén en fila */
   margin-top: 10px;
@@ -129,11 +140,12 @@
 .tech-item {
   padding: 5px 10px;
   font-size: 1rem;
-  color: white; 
+  color: white;
   font-weight: 600;
   margin-right: 0px;
 }
 
+/* Enlaces de proyectos */
 .project-links {
   margin-top: 15px;
 }

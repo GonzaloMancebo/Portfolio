@@ -1,4 +1,5 @@
-import React from 'react';
+"use client";
+import { useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact, faAndroid, faCss3Alt, faHtml5, faNodeJs, faGithub, faAws, faJs } from '@fortawesome/free-brands-svg-icons';
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
@@ -18,21 +19,31 @@ function Technologies() {
     { id: 9, icon: faJs, name: 'JavaScript', color: 'js-color' }
   ];
 
+  useEffect(() => {
+    document.body.style.backgroundImage = 'url("/background.jpg")';
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundRepeat = "no-repeat";
+    return () => {
+      document.body.style.backgroundImage = ""; // Limpiar el fondo al salir
+    };
+  }, []);
+
   return (
     <>
-    <ReturnHome />
-    <div className="technologies-container">
-      <div className="technologies-list">
-        {technologies.map((tech) => (
-          <div key={tech.id} className="technology-item">
-            <div className={`tech-icon ${tech.color}`}>
-              <FontAwesomeIcon icon={tech.icon} />
+      <ReturnHome />
+      <div className="technologies-container">
+        <div className="technologies-list">
+          {technologies.map((tech) => (
+            <div key={tech.id} className="technology-item">
+              <div className={`tech-icon ${tech.color}`}>
+                <FontAwesomeIcon icon={tech.icon} />
+              </div>
+              <div className="tech-name">{tech.name}</div>
             </div>
-            <div className="tech-name">{tech.name}</div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
     </>
   );
 }
