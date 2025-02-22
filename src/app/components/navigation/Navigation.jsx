@@ -3,7 +3,7 @@ import { faHome, faFolderOpen, faLaptopCode, faEnvelope, faBriefcase, faUserTie 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useLanguage } from "../../translate/LanguageContext";
 import Link from "next/link";
-import "./Navigation.css";
+import "@/styles/Navigation.css";
 
 function Navigation() {
   const { language, translations } = useLanguage();

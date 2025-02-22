@@ -4,8 +4,8 @@ import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
-import { useLanguage } from '../translate/LanguageContext'; // Importa el contexto de lenguaje
-import "./main.css";
+import { useLanguage } from '../translate/LanguageContext'; 
+import "@/styles/Main.css";
 import Navigation from '../components/navigation/Navigation';
 
 export default function Main() {

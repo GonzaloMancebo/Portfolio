@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import initialProjects from '../../../../data'; // Importa desde el archivo data.js
 import Image from "next/image";
 import ReturnHome from "../../components/return/ReturnHome";
-import "./projects.css";
+import "@/styles/projects.css";
 
 function ProjectsCarousel() {
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);

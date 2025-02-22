@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact, faAndroid, faCss3Alt, faHtml5, faNodeJs, faGithub, faAws, faJs } from '@fortawesome/free-brands-svg-icons';
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
-import './technologies.css';
+import '@/styles/technologies.css';
 import ReturnHome from '@/app/components/return/ReturnHome';
 
 function Technologies() {

@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from 'react';
-import './LoadingScreen.css';
+import '@/styles/LoadingScreen.css';
 
 const LoadingScreen = ({ onAnimationEnd }) => {
   const [isLoading, setIsLoading] = useState(true);

@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'; // Importa el ícono
-import "./ReturnHome.css";
+import "@/styles/ReturnHome.css";
 
 
 function ReturnHome() {

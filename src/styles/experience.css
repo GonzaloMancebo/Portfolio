@@ -30,6 +30,15 @@ body {
   gap: 1rem;
 }
 
+/* Ajustes en la estructura del header en pantallas pequeñas */
+@media (max-width: 768px) {
+  .experience-header {
+    grid-template-columns: 1fr; /* Coloca los elementos en una sola columna */
+    gap: 1rem;
+  }
+}
+
+/* Estilos para la información de la empresa y detalles */
 .experience-company {
   text-align: left;
 }
@@ -45,11 +54,17 @@ body {
   color: white;
 }
 
-.experience-company p,
-.experience-details p {
-  font-size: 1rem;
-  margin: 0.2rem 0;
-  color: white;
+/* Ajuste en el tamaño de los textos en dispositivos pequeños */
+@media (max-width: 425px) {
+  .experience-company h2,
+  .experience-details h3 {
+    font-size: 1.2rem; /* Reducir el tamaño del título */
+  }
+
+  .experience-company p,
+  .experience-details p {
+    font-size: 0.9rem; /* Reducir el tamaño de los textos */
+  }
 }
 
 /* Estilo para la descripción de la experiencia */
@@ -59,8 +74,26 @@ body {
   list-style: disc;
 }
 
+/* Ajuste de los elementos de la lista para dispositivos pequeños */
+@media (max-width: 768px) {
+  .experience-description ul {
+    padding-left: 1rem;
+  }
+}
+
 .experience-description ul li {
   margin: 0.5rem 0;
   line-height: 1.5;
-  color: white;
+  color: black;
+}
+
+/* Mejorar el espacio en pantallas pequeñas */
+@media (max-width: 425px) {
+  .experience-container {
+    padding: 1rem; /* Reducir el padding */
+  }
+
+  .experience-description ul {
+    padding-left: 0.5rem; /* Reducir el espacio de la lista */
+  }
 }

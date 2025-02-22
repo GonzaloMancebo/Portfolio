@@ -1,7 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import ReturnHome from "@/app/components/return/ReturnHome";
-import "./experience.css";
+import "@/styles/experience.css";
 
 function Experience() {
   useEffect(() => {
