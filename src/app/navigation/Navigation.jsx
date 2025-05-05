@@ -1,7 +1,7 @@
 "use client";
 import { faHome, faFolderOpen, faLaptopCode, faEnvelope, faBriefcase, faUserTie } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useLanguage } from "../../translate/LanguageContext";
+import { useLanguage } from "../translate/LanguageContext";
 import Link from "next/link";
 import "@/styles/Navigation.css";
 

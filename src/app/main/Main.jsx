@@ -6,7 +6,7 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
 import { useLanguage } from '../translate/LanguageContext'; 
 import "@/styles/Main.css";
-import Navigation from '../components/navigation/Navigation';
+import Navigation from '../navigation/Navigation';
 
 export default function Main() {
   const { language, changeLanguage, translations } = useLanguage(); // Usa el contexto
